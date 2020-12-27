@@ -18,6 +18,17 @@ public class Queue<T> {
         return (T) last.first;
     }
 
+    T poll(){
+        if(first == null){
+            throw new NullPointerException("Queue empty");
+        }else {
+            Queue tmp = first;
+            first = first.next;
+            return (T) tmp.value;
+        }
+    }
+
+
     public Queue(T value){
         this.next =null;
         this.value =value;

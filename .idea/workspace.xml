@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f84daec-6c63-4148-a709-1de55e5f78b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/generic-blocking-queue-0rcun/org/kodluyoruz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/generic-blocking-queue-0rcun/org/kodluyoruz/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/generic-blocking-queue-0rcun/org/kodluyoruz/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/generic-blocking-queue-0rcun/org/kodluyoruz/Queue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kodluyoruz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kodluyoruz/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kodluyoruz/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kodluyoruz/Queue.java" afterDir="false" />
     </list>
@@ -76,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609058221754</updated>
-      <workItem from="1609058223568" duration="3904000" />
+      <workItem from="1609058223568" duration="4253000" />
     </task>
     <servers />
   </component>

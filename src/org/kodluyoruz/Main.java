@@ -6,14 +6,29 @@ public class Main {
 	// write your code here
         Queue root = new Queue();
         root.add(new String("first"));
-        System.out.println("Peek: "+root.peek());
         root.add(new String("second"));
-        System.out.println("Peek: "+root.peek());
         root.add(new String("third"));
-        System.out.println("Peek: "+root.peek());
         root.add(new String("fourth"));
-        System.out.println("Peek: "+root.peek());
-
-
+        try {
+            System.out.println("Poll"+root.peek());
+            System.out.println("Poll"+root.peek());
+            System.out.println("Poll"+root.peek());
+            System.out.println("Poll"+root.peek());
+            System.out.println("Poll"+root.peek());
+            System.out.println("Poll"+root.peek());
+        } catch (NullPointerException exception) {
+            System.out.println("E: "+exception.getMessage());
+        }
+        try {
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+            System.out.println("Poll"+root.poll());
+        } catch (NullPointerException exception) {
+            System.out.println("E: "+exception.getMessage());
+        }
     }
 }
