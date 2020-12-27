@@ -13,9 +13,11 @@ public class Queue<T> {
         last.next = new Queue(value);
         last = last.next;
         if (first == null) first = last;
-        System.out.println("ADED: "+last);
-
     }
+    T peek(){
+        return (T) last.first;
+    }
+
     public Queue(T value){
         this.next =null;
         this.value =value;
@@ -24,5 +26,6 @@ public class Queue<T> {
         first = null;
         last = this;
     }
+
 
 }
