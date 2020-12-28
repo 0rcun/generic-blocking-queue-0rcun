@@ -2,41 +2,46 @@ package org.kodluyoruz;
 
 import java.awt.*;
 
-//FIRST IN FIRST OUT
 public class Queue<T> {
-    Queue next;
-    T value;
-    static Queue first;
-    static Queue last;
+    private Node first;
+    private Node last;
 
+    /**
+     * Adds item to end of the list
+     * @param value
+     */
     void add(T value){
-        last.next = new Queue(value);
-        last = last.next;
-        if (first == null) first = last;
-    }
-    T peek(){
-        return (T) last.first;
+        if(this.last == null){
+            this.last = new Node(value);//Case that is list empty
+        }
+        else {
+            this.last.setNext(new Node(value));
+            this.last = this.last.getNext();
+        }
+        if (this.first == null) this.first = this.last; //Case that is list empty
+        System.out.println(this.first);
+        System.out.println(this.last);
     }
 
+    /**
+     * Returns value that is head of the list
+     * @return
+     */
+    T peek(){
+        return (T) this.first.getValue();
+    }
+
+    /**
+     *  Returns and removes value that is head of the list
+     * @return
+     */
     T poll(){
-        if(first == null){
-            throw new NullPointerException("Queue empty");
+        if(this.first == null){
+            return null;
         }else {
-            Queue tmp = first;
-            first = first.next;
-            return (T) tmp.value;
+            Node tmp = this.first;//Temporary value
+            this.first = this.first.getNext();
+            return (T) tmp.getValue();
         }
     }
-
-
-    public Queue(T value){
-        this.next =null;
-        this.value =value;
-    }
-    public Queue(){
-        first = null;
-        last = this;
-    }
-
-
 }
