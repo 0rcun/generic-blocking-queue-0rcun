@@ -10,7 +10,7 @@ public class Queue<T> {
      * Adds item to end of the list
      * @param value
      */
-    void add(T value){
+    synchronized void add(T value){
         if(this.last == null){
             this.last = new Node(value);//Case that is list empty
         }
@@ -19,15 +19,15 @@ public class Queue<T> {
             this.last = this.last.getNext();
         }
         if (this.first == null) this.first = this.last; //Case that is list empty
-        System.out.println(this.first);
-        System.out.println(this.last);
+        System.out.println("Inserted: "+value.toString());
     }
 
     /**
      * Returns value that is head of the list
      * @return
      */
-    T peek(){
+    synchronized T peek(){
+        System.out.println("Peek: "+this.first.getValue());
         return (T) this.first.getValue();
     }
 
@@ -35,12 +35,14 @@ public class Queue<T> {
      *  Returns and removes value that is head of the list
      * @return
      */
-    T poll(){
+    synchronized T poll(){
         if(this.first == null){
+            System.out.println("Poll: "+null);
             return null;
         }else {
             Node tmp = this.first;//Temporary value
             this.first = this.first.getNext();
+            System.out.println("Poll: "+tmp.getValue());
             return (T) tmp.getValue();
         }
     }
